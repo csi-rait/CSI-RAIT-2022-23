@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
+    <meta property="og:title" content="CSI RAIT">
+    <meta property="og:description"
+        content="Formed in 1965, the Computer Society of India has been instrumental in guiding the Indian IT industry on the right path since its formative years. Today, the CSI has 70 chapters all over India, 418 student branches and more than 90000 members including India’s most famous IT industry leaders, brilliant scientists and dedicated academicians.">
+
+    <meta property="og:image" content="https://i.imgur.com/XRflgCF.png">
+
+    <link rel="icon" href="./assets/images/csi-logo.png" type="image/x-icon">
+
+    <title>CSI | Events</title>
+</head>
+
+<body style="cursor: url(./assets/images/blue.png) 15 15,auto;">
+    <div class="bg-linear-about-us pt-10">
+        <div class="mx-auto container">
+            <nav class="lg:hidden relative z-50">
+                <div class="flex py-2 justify-between items-center px-4">
+
+                    <div>
+                        <img src="assets/images/csi-logo.png" class=" w-20 ">
+                    </div>
+                    <div class="visible flex items-center">
+                        <ul id="list"
+                            class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
+                            <li
+                                class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                <a href="./index.html">
+                                    <span class="ml-2 font-bold">Home</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                                onclick="dropdownHandler(this)">
+                                <a href="./domain.html">
+                                    <span class="ml-2 font-bold">Domains</span>
+                                </a>
+                            </li>
+                            <li
+                                class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <a href="./members.html">
+                                    <span class="ml-2 font-bold">Members</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                                onclick="dropdownHandler(this)">
+                                <a href="./Events.html">
+                                    <span class="ml-2 font-bold">Events</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                                onclick="dropdownHandler(this)">
+                                <a href="opencode/">
+                                    <span class="ml-2 font-bold">OpenSource</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="xl:hidden">
+                            <svg id="open" onclick="MenuHandler(true)" aria-haspopup="true" aria-label="Main Menu"
+                                xmlns="http://www.w3.org/2000/svg" class="show-m-menu icon icon-tabler icon-tabler-menu"
+                                width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"></path>
+                                <line x1="4" y1="8" x2="20" y2="8"></line>
+                                <line x1="4" y1="16" x2="20" y2="16"></line>
+                            </svg>
+                            <div id="close" class="hidden close-m-menu" onclick="MenuHandler(false)">
+                                <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="f-f-l z-10">
+                <div class="z-100 mx-auto container w-full px-4 xl:px-0 justify-between items-center lg:flex"
+                    style="width: 100vw; height: 10vh">
+                    <div>
+                        <div style=" left: 10px">
+                            <img src="assets/images/csi-logo.png" class="w-20">
+                        </div>
+                    </div>
+                    <div class="flex items-center text-white text-lg font-bold">
+                        <ul class="flex items-center pr-3 xl:pr-12">
+                            <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="./index.html">Home</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a
+                                    href="./domain.html">Domains</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a
+                                    href="./members.html">Members</a></li>
+                            <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a
+                                    href="./Events.html">Events</a></li>
+                        </ul>
+                        <a href="opencode/"
+                            class="px-6 py-3 bg-white bg-linear-button text-white text-lg font-bold flex items-center justify-center">
+                            OpenSource
+                            <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M9.129 5.24952L5.106 1.22652L6.1665 0.166016L12 5.99952L6.1665 11.833L5.106 10.7725L9.129 6.74952H0V5.24952H9.129Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="py-12 lg:py-24">
+                <h1 class="text-center f-f-l text-white text-4xl md:text-8xl font-black">Events</h1>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- <div class="card mb-3 container newclass2">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="https://media.discordapp.net/attachments/1013461333896863815/1013466715620917280/unknown.png?width=526&height=613" class="img-fluid rounded-start m-2" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h4 class="card-title">Induction of FEs</h4>
+              <p class="text-muted">22nd August</p> 
+              <hr>
+              <br>
+           
+              <h5 class="card-text">The new era of CSI-RAIT began with an interactive session conducted by the team members for FE students. The session opened with the core members formally introducing themselves as well as the committee to the audience. Thereafter, an immersive and participatory session on a prevalent topic - ‘ Web Design and Development ’ was carried out by the team. The main highlight of this session was to make students understand the basics of web development and its potential in the technological industry. Students were also taught some principal elements of HTML and CSS, and the techniques behind the creation of websites.</h5>
+            </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
+    <div href="#"  style="margin-left: 7.5vw; margin-right: 7.5vw;"
+        class="newclass2 flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xxl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-64 md:rounded-none md:rounded-l-lg"
+            src="https://media.discordapp.net/attachments/1013461333896863815/1013466715620917280/unknown.png?width=526&height=613"
+            alt="">
+        <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Induction of FEs</h5>
+            <p style="color: black; opacity: 50%; font-size: 12px;">22-08-2022</p>
+            <br>
+            <hr>
+            <br>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">The new era of CSI-RAIT began with an
+                interactive session conducted by the team members for FE students. The session opened with the core
+                members formally introducing themselves as well as the committee to the audience. Thereafter, an
+                immersive and participatory session on a prevalent topic - ‘ Web Design and Development ’ was carried
+                out by the team. The main highlight of this session was to make students understand the basics of web
+                development and its potential in the technological industry. Students were also taught some principal
+                elements of HTML and CSS, and the techniques behind the creation of websites.</p>
+        </div>
+    </div>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <div class="bg-indigo-300 py-6 flex flex-col items-center justify-center f-f-l rounded-t-3xl">
+        <div class="w-44">
+            <img loading="lazy" src="assets/images/csi-logo.png" />
+        </div>
+        <div class="flex items-center py-6">
+            <a class="cursor-pointer" href="https://www.linkedin.com/in/csi-rait/">
+                <div class="pr-10">
+                    <svg fill="fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    </svg>
+                </div>
+            </a>
+            <a class="cursor-pointer" href="https://www.instagram.com/csi.rait/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+            </a>
+        </div>
+        <div>
+            <ul class="flex">
+                <a href="index.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
+                        Home</li>
+                </a>
+                <a href="domain.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black relative font-normal cursor-pointer text-hover">
+                        Domains</li>
+                </a>
+                <a href="members.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
+                        Members</li>
+                </a>
+                <a href="Events.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
+                        Events</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pt-6 flex lg:items-start items-center">
+            <p class="lg:text-base text-xs text-black leading-5">2022 CSI-RAIT. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

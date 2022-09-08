@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+    <meta property="og:title" content="CSI RAIT">
+    <meta property="og:description" content="Formed in 1965, the Computer Society of India has been instrumental in guiding the Indian IT industry on the right path since its formative years. Today, the CSI has 70 chapters all over India, 418 student branches and more than 90000 members including India’s most famous IT industry leaders, brilliant scientists and dedicated academicians.">
+    <meta property="og:image" content="https://i.imgur.com/XRflgCF.png">
+
+    <link rel="icon" href="./assets/images/csi-logo.png" type="image/x-icon">
+
+    <title>CSI | Home</title>
+</head>
+
+<body style="cursor: url(./assets/images/blue.png) 15 15,auto;">
+    <div class="relative w-full h-full ">
+        <div class="">
+            <!-- <img class="absolute bg-cover bg-center w-full h-full inset-0" src="https://cdn.tuk.dev/assets/templates/prodify/background.png" alt="" /> -->
+            <canvas class="absolute  w-full inset-0 z-0 "></canvas>
+
+        </div>
+        <nav class="lg:hidden relative z-50">
+            <div class="flex py-2 justify-between items-center px-4">
+                <div>
+                    <img src="assets/images/csi-logo.png" class="w-20">
+                </div>
+                <div class="visible flex items-center">
+                    <ul id="list" class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
+                        <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                            <a href="./index.html">
+                                <span class="ml-2 font-bold">Home</span>
+                            </a>
+                        </li>
+                        <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
+                            <a href="./domain.html">
+                                <span class="ml-2 font-bold">Domains</span>
+                            </a>
+                        </li>
+                        <li class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                            <a href="./members.html">
+                                <span class="ml-2 font-bold">Members</span>
+                            </a>
+                        </li>
+                        <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
+                            <a href="./Events.html">
+                                <span class="ml-2 font-bold">Events</span>
+                            </a>
+                        </li>
+                        <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
+                            <a href="opencode/">
+                                <span class="ml-2 font-bold">OpenSource</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="xl:hidden">
+                        <svg id="open" onclick="MenuHandler(true)" aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="show-m-menu icon icon-tabler icon-tabler-menu" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"></path>
+                                <line x1="4" y1="8" x2="20" y2="8"></line>
+                                <line x1="4" y1="16" x2="20" y2="16"></line>
+                            </svg>
+                        <div id="close" class="hidden close-m-menu" onclick="MenuHandler(false)">
+                            <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <nav class="f-f-l relative z-10">
+            <div class="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center py-12">
+                <div>
+                    <div>
+                        <img src="assets/images/csi-logo.png" class="w-20">
+                    </div>
+                </div>
+                <div class="flex items-center text-white text-lg font-bold">
+                    <ul class="flex items-center pr-3 xl:pr-12">
+                        <li class="cursor-pointer hover:text-gray-300 ease-in"><a href="./index.html">Home</a></li>
+                        <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./domain.html">Domains</a></li>
+                        <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./members.html">Members</a></li>
+                        <li class="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in"><a href="./Events.html">Events</a></li>
+                    </ul>
+                    <a href="opencode/" class="px-6 py-3 bg-white bg-linear-button text-white text-lg font-bold flex items-center justify-center">
+                            OpenSource
+                            <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M9.129 5.24952L5.106 1.22652L6.1665 0.166016L12 5.99952L6.1665 11.833L5.106 10.7725L9.129 6.74952H0V5.24952H9.129Z" fill="white" />
+                            </svg>
+                        </a>
+                </div>
+            </div>
+        </nav>
+        <div class="relative px-4 xl:px-0  container mx-auto md:flex items-center gap-8">
+            <div class="text-color w-full md:w-1/3 pt-16 lg:pt-4">
+                <h1 class="text-7xl w-1/2 xl:w-full xl:text-9xl font-black text-white f-f-l md: text-black">CSI RAIT 2022/23 Vanguard</h1>
+                <div class="f-f-r text-xl text-white lg:text-3xl pt-10  xl:pt-16">
+                    <h2>The next big thing starts here.</h2>
+                </div>
+                <a href="https://forms.gle/BcGXCKMTDEJqBAaUA"><button class="text-xl w-full xl:text-3xl xl:w-11/12 mb-8 xl:mt-11 f-f-r py-6 bg-linear-button-home text-white font-bold">Join Now</button></a>
+            </div>
+            <!-- <img class="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0" src="https://i.ibb.co/9GMTkW3/desktop.png" /> -->
+        </div>
+        <!-- <div style="margin-top: -216px;margin-left: -11px; background: linear-gradient(180deg,rgb(10,20,56) 32%, #fff 100%);">
+            <svg width="100%" height="300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="30%" stop-color="rgb(10,20,56)"/>
+                        <stop offset="60%" stop-color="#fff"/>
+                    </linearGradient>
+                </defs>
+                <rect x="10" y="120" width="100%" height="240" fill="url(#Gradient2)"/>
+            </svg>
+        </div> -->
+    </div>
+    <div style="height: 8vw;"></div>
+
+    <div class="mx-auto z-50 container px-4 sm:mt-28 pt-96 xl:px-0  xl:py-12 ">
+        <div class="">
+            <div class="flex flex-wrap items-center">
+                <div class="sm:pt-20 lg:w-2/5 w-full h-25">
+                    <iframe width="370" height="250" src="https://www.youtube.com/embed/jpTfk9i1BoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;encrypted-media;" allowfullscreen></iframe>
+                </div>
+                <div class="lg:w-3/5 w-full">
+                    <div class="lg:pl-8 py-2 text-color">
+                        <div class="mx-auto px-4 xl:px-0 container">
+                            <div class="text-color f-f-l">
+                                <h1 class="text-xl lg:text-4xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center">
+                                    "The spirit to learn and adapt is highly demonstrated by CSI-RAIT through their participation in almost every activity including technical hands-on workshops, expert sessions and article writing"
+                                </h1>
+                                <h1 class="text-color-gradient text-xl lg:text-3xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center pt-5 lg:pt-20">
+                                    ~ Dr. Leena R. Ragha<br> HOD (CE), RAIT</h1>
+                            </div>
+                        </div>
+                        <!-- <h1 class="text-3xl xl:text-6xl leading-snug f-f-l font-black">loresloresloresloreslor</h1>
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center rounded-full w-16 h-16">
+                                <img src="https://cdn.tuk.dev/assets/templates/prodify/profile.png" alt="" />
+                            </div>
+                            <div class="pl-3">
+                                <h3 class="f-f-l text-xl lg:text-3xl">HOD NAME</h3>
+                                <h4 class="f-f-r text-lg pt-2">HOD</h4>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-linear-pink pt-12">
+        <div class="px-4 xl:px-0">
+            <div class="container mx-auto">
+                <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 lg:pb-10">
+                    <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">
+                        <h1 class="text-3xl font-bold w-1/2">Tech talks</h1>
+                        <div class="flex justify-end w-full items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path
+                                        d="M26 26.0001V37.1701L29.656 33.5141L32.486 36.3441L24 44.8281L15.514 36.3441L18.344 33.5141L22 37.1701V26.0001H26ZM24 4.00012C27.434 4.00029 30.7482 5.26235 33.3124 7.54636C35.8767 9.83037 37.5122 12.977 37.908 16.3881C40.3966 17.0668 42.5675 18.5983 44.0414 20.7152C45.5152 22.832 46.1983 25.3995 45.9713 27.9689C45.7442 30.5383 44.6214 32.9462 42.7992 34.7718C40.9769 36.5973 38.571 37.7244 36.002 37.9561L36 34.0001C36.0032 30.8544 34.771 27.8332 32.5687 25.587C30.3665 23.3408 27.3702 22.0492 24.2251 21.9902C21.0799 21.9312 18.0374 23.1096 15.7524 25.2716C13.4675 27.4337 12.1228 30.4065 12.008 33.5501L12 34.0001V37.9561C9.43093 37.7248 7.02484 36.5979 5.2023 34.7725C3.37976 32.9471 2.25669 30.5392 2.02938 27.9698C1.80207 25.4003 2.48499 22.8327 3.95877 20.7157C5.43255 18.5987 7.60345 17.0669 10.092 16.3881C10.4874 12.9769 12.1228 9.82994 14.6872 7.54585C17.2515 5.26176 20.5659 3.99985 24 4.00012Z"
+                                        fill="url(#paint0_linear)"
+                                    />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="24.0003" y1="4.00012" x2="24.0003" y2="44.8281" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F56565" />
+                                            <stop offset="1" stop-color="#D53F8C" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">
+                        <h1 class="text-3xl font-bold w-1/2">Technical Symposium</h1>
+                        <div class="flex justify-end w-full items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path
+                                        d="M40 40C40 40.5304 39.7893 41.0391 39.4142 41.4142C39.0391 41.7892 38.5304 42 38 42H10C9.46957 42 8.96086 41.7892 8.58579 41.4142C8.21071 41.0391 8 40.5304 8 40V22H2L22.654 3.22396C23.0222 2.88892 23.5022 2.70325 24 2.70325C24.4978 2.70325 24.9778 2.88892 25.346 3.22396L46 22H40V40ZM15 26C15 28.3869 15.9482 30.6761 17.636 32.3639C19.3239 34.0518 21.6131 35 24 35C26.3869 35 28.6761 34.0518 30.364 32.3639C32.0518 30.6761 33 28.3869 33 26H29C29 27.326 28.4732 28.5978 27.5355 29.5355C26.5979 30.4732 25.3261 31 24 31C22.6739 31 21.4021 30.4732 20.4645 29.5355C19.5268 28.5978 19 27.326 19 26H15Z"
+                                        fill="url(#paint0_linear)"
+                                    />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="24" y1="2.70325" x2="24" y2="42" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F56565" />
+                                            <stop offset="1" stop-color="#D53F8C" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">
+                        <h1 class="text-3xl font-bold w-10/12">Workshops</h1>
+                        <div class="flex justify-end w-full items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path
+                                        d="M38 12H22C21.4696 12 20.9609 12.2107 20.5858 12.5858C20.2107 12.9609 20 13.4696 20 14V40H8C7.46957 40 6.96086 39.7893 6.58579 39.4142C6.21071 39.0391 6 38.5304 6 38V6C6 5.46957 6.21071 4.96086 6.58579 4.58579C6.96086 4.21071 7.46957 4 8 4H36C36.5304 4 37.0391 4.21071 37.4142 4.58579C37.7893 4.96086 38 5.46957 38 6V12ZM26 16H42C42.5304 16 43.0391 16.2107 43.4142 16.5858C43.7893 16.9609 44 17.4696 44 18V42C44 42.5304 43.7893 43.0391 43.4142 43.4142C43.0391 43.7893 42.5304 44 42 44H26C25.4696 44 24.9609 43.7893 24.5858 43.4142C24.2107 43.0391 24 42.5304 24 42V18C24 17.4696 24.2107 16.9609 24.5858 16.5858C24.9609 16.2107 25.4696 16 26 16Z"
+                                        fill="url(#paint0_linear)"
+                                    />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="25" y1="4" x2="25" y2="44" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F56565" />
+                                            <stop offset="1" stop-color="#D53F8C" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white px-6 py-6 text-color f-f-l shadow-lg mt-10 xl:-mt-20">
+                        <h1 class="text-3xl font-bold w-9/12">Build Strong Network </h1>
+                        <div class="flex justify-end w-full items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                    <path d="M12.91 38L4 45V8C4 7.46957 4.21071 6.96086 4.58579 6.58579C4.96086 6.21071 5.46957 6 6 6H42C42.5304 6 43.0391 6.21071 43.4142 6.58579C43.7893 6.96086 44 7.46957 44 8V36C44 36.5304 43.7893 37.0391 43.4142 37.4142C43.0391 37.7893 42.5304 38 42 38H12.91ZM22.586 24.242L17.636 19.292L14.808 22.122L22.586 29.9L33.9 18.586L31.072 15.758L22.586 24.242Z" fill="url(#paint0_linear)" />
+                                    <defs>
+                                        <linearGradient id="paint0_linear" x1="24" y1="6" x2="24" y2="45" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F56565" />
+                                            <stop offset="1" stop-color="#D53F8C" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-10 lg:pt-40">
+                    <div class="container mx-auto">
+                        <div class="flex flex-col-reverse flex-col lg:flex-row  items-center">
+                            <div class="lg:w-2/3 mt-24 lg:mt-0 w-full xl:pr-20">
+                                <div class="py-2 text-color">
+                                    <h1 class="text-2xl lg:text-6xl lg:leading-snug tracking-tighter f-f-l font-black">What is CSI-RAIT ?</h1>
+                                    <h2 class="text-lg lg:text-3xl leading-7 lg:leading-10 f-f-r py-4 lg:py-8">CSI- RAIT is a leading technical committee. It is a committee that acts as a catalyst for aspiring technophiles by bridging the gap between academia and industry. A platform for exploring and learning.</h2>
+                                    <div class="flex items-center cursor-pointer">
+                                        <a href="https://forms.gle/BcGXCKMTDEJqBAaUA">
+                                            <h3 class="f-f-r text-2xl font-semibold underline text-color-pink">Lets Get Started</h3>
+                                        </a>
+                                        <div class="pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M13.1719 12L8.22192 7.04999L9.63592 5.63599L15.9999 12L9.63592 18.364L8.22192 16.95L13.1719 12Z" fill="#D53F8C" />
+                                                </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lg:w-1/3 w-full relative min-height-images flex items-end justify-center">
+                                <img class="absolute w-full h-full inset-0 object-cover object-center rounded-xl" src="./assets/images/IMG_7544.png" alt="" />
+                                <div class="relative z-10 bg-white rounded shadow-lg p-6 w-10/12 -mb-20">
+                                    <div class="flex items-center justify-between w-full sm:w-full mb-8">
+                                        <div class="flex items-center">
+                                            <div class="p-4 bg-yellow-200 rounded-lg">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-discount" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <line x1="9" y1="15" x2="15" y2="9" />
+                                                        <circle cx="9.5" cy="9.5" r=".5" />
+                                                        <circle cx="14.5" cy="14.5" r=".5" />
+                                                        <path d="M5 7.2a2.2 2.2 0 0 1 2.2 -2.2h1a2.2 2.2 0 0 0 1.55 -.64l.7 -.7a2.2 2.2 0 0 1 3.12 0l.7 .7a2.2 2.2 0 0 0 1.55 .64h1a2.2 2.2 0 0 1 2.2 2.2v1a2.2 2.2 0 0 0 .64 1.55l.7 .7a2.2 2.2 0 0 1 0 3.12l-.7 .7a2.2 2.2 0 0 0 -.64 1.55 v1a2.2 2.2 0 0 1 -2.2 2.2h-1a2.2 2.2 0 0 0 -1.55 .64l-.7 .7a2.2 2.2 0 0 1 -3.12 0l-.7 -.7a2.2 2.2 0 0 0 -1.55 -.64h-1a2.2 2.2 0 0 1 -2.2 -2.2v-1a2.2 2.2 0 0 0 -.64 -1.55l-.7 -.7a2.2 2.2 0 0 1 0 -3.12l.7 -.7a2.2 2.2 0 0 0 .64 -1.55 v-1" />
+                                                    </svg>
+                                            </div>
+                                            <div class="ml-6">
+                                                <h3 class="mb-1 leading-5 text-gray-800 font-bold text-2xl">330</h3>
+                                                <p class="text-gray-600 text-sm tracking-normal font-normal leading-5">members</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="flex items-center pl-3 text-green-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trending-up" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <polyline points="3 17 9 11 13 15 21 7" />
+                                                        <polyline points="14 7 21 7 21 14" />
+                                                    </svg>
+                                                <p class="text-green-400 text-xs tracking-wide font-bold leading-normal pl-1">7.2%</p>
+                                            </div>
+                                            <p class="font-normal text-xs text-right leading-4 text-green-400 tracking-normal">Increase</p>
+                                        </div>
+                                    </div>
+                                    <div class="relative mb-3">
+                                        <hr class="h-1 rounded-sm bg-gray-200" />
+                                        <hr class="absolute top-0 h-1 w-7/12 rounded-sm bg-indigo-700" />
+                                    </div>
+                                    <h4 class="text-base text-gray-600 font-normal tracking-normal leading-5">Yearly Goal</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-28 lg:py-28">
+                    <div class="">
+                        <div class="flex flex-wrap items-center">
+                            <div class="lg:w-1/3 w-full relative min-height-images flex items-end justify-center">
+                                <img class="absolute w-full h-full inset-0 object-cover object-center rounded-xl" src="./assets/images/IMG_7564.png" alt="" />
+
+                            </div>
+                            <div class="lg:w-2/3 py-24 lg:py-0 w-full lg:pl-20">
+                                <div class="py-2 text-color">
+                                    <h1 class="text-2xl lg:text-3xl lg:text-6xl tracking-tighter lg:leading-snug f-f-l font-black">Why join CSI?</h1>
+                                    <h2 class="text-lg lg:text-3xl leading-7 lg:leading-10 f-f-r py-8">Being the leading tech committee CSI helps you build a strong network, learn more about research and technical documentation, boost confidence by actively participating in various tech events and workshops, brush up
+                                        your marketing skills by actively taking part in the publicity work and perks don't end here.<br> You can be part of the tech team and learn some cool technical stuff: work on some real-time projects. The committee
+                                        assists you in your personal development.</h2>
+                                    <div class="flex items-center cursor-pointer">
+                                        <a href="https://forms.gle/BcGXCKMTDEJqBAaUA>" <h3 class="f-f-r text-2xl font-semibold underline text-color-pink">Lets Get Started</h3></a>
+                                        <div class="pl-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M13.1719 12L8.22192 7.04999L9.63592 5.63599L15.9999 12L9.63592 18.364L8.22192 16.95L13.1719 12Z" fill="#D53F8C" />
+                                                </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full mt-20 flex flex-col items-center justify-center pb-5 lg:pb-40">
+                    <div class="w-full lg:w-9/12 h-0.5 background-brands"></div>
+                    <div class="flex lg:flex-row flex-col items-center justify-center lg:justify-between pt-16 border-brands w-full lg:w-9/12 f-f-l">
+                        <div class="pb-4 lg:pb-0">
+                            <img src="./assets/images/HackerRank_wordmark-299x66-0cee85e.png">
+                        </div>
+                        <div class="py-4 w-40 lg:py-0">
+                            <div class="pb-4 lg:pb-0">
+                                <img src="./assets/images/GitHub_Logo.png">
+                            </div>
+                        </div>
+                        <div class="py-4 w-40 lg:py-0">
+                            <div class="pb-4 lg:pb-0">
+                                <img src="./assets/images/Rait_new_logo_png.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto px-4 xl:px-0 container pt-10 lg:pt-56">
+        <div class="text-color f-f-l">
+            <h1 class="text-xl lg:text-6xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center">
+                "CSI-RAIT is a technology-driven<br> society that fosters technology and<br> leadership capabilities among its<br> members in order to address society's<br> rapidly changing needs."
+            </h1>
+            <h1 class="text-color-gradient text-xl lg:text-5xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center pt-5 lg:pt-20">
+                ~ Dr. Mukesh D. Patil<br> Principal, RAIT</h1>
+        </div>
+    </div>
+    <div class="mx-auto container py-20 lg:pt-44 lg:pb-52">
+        <div class="px-4 xl:px-0">
+            <div class="xl:flex items-center justify-between w-full text-color">
+                <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                    <h1 class="text-6xl font-black f-f-l">2,523</h1>
+                    <h2 class="f-f-r text-color-lighter text-3xl pt-5">Members</h2>
+                </div>
+                <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                    <h1 class="text-6xl font-black f-f-l">2,523</h1>
+                    <h2 class="f-f-r text-color-lighter text-3xl pt-5">Workshops</h2>
+                </div>
+                <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                    <h1 class="text-6xl font-black f-f-l">63,075</h1>
+                    <h2 class="f-f-r text-color-lighter text-3xl pt-5">Volunteers</h2>
+                </div>
+                <div class="flex flex-col items-center xl:block py-4 xl:py-0">
+                    <h1 class="text-6xl font-black f-f-l">12,218</h1>
+                    <h2 class="f-f-r text-color-lighter text-3xl pt-5">Council Members</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto container pb-12">
+        <div class="w-full flex justify-center">
+            <div class="w-10/12 bg-linear-member px-12 py-16 rounded-md">
+
+                <div class="flex flex-wrap">
+                    <div class="md:w-2/3 w-full pb-6 md:pb-0 md:pr-6 f-f-l  f-f-l">
+                        <h1 class="text-2xl lg:text-5xl lg:w-9/12 text-white font-black leading-tight">Become a member and start building the next big thing</h1>
+                        <a href="https://forms.gle/BcGXCKMTDEJqBAaUA"><button class="mt-5 lg:mt-12 py-4 px-4 lg:px-6 bg-white  font-bold text-color-pink rounded-lg text-lg lg:text-xl hover:bg-gray-100 ease-in-out">Join the community</button></a>
+                    </div>
+                    <div class="md:w-1/3 w-full">
+                        <div class="flex flex-col items-center justify-center">
+                            <div class="flex items-center mt-8">
+                                <div class="w-20 h-20 rounded-full mr-3">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png" alt="" />
+                                </div>
+                                <div class="w-20 h-20 rounded-full">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png" alt="" />
+                                </div>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <div class="w-20 h-20 rounded-full mr-3">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png" alt="" />
+                                </div>
+                                <div class="w-20 h-20 rounded-full mr-3">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png" alt="" />
+                                </div>
+                                <div class="w-20 h-20 rounded-full">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png" alt="" />
+                                </div>
+                            </div>
+                            <div class="flex items-center mt-4">
+                                <div class="w-20 h-20 rounded-full mr-3">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png" alt="" />
+                                </div>
+                                <div class="w-20 h-20 rounded-full">
+                                    <img class="w-full h-full" src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="bg-indigo-300 py-6 flex flex-col items-center justify-center f-f-l rounded-t-3xl">
+        <div class="w-44">
+            <img loading="lazy" src="assets/images/csi-logo.png" />
+        </div>
+        <div class="flex items-center py-6">
+            <a class="cursor-pointer" href="https://www.linkedin.com/in/csi-rait/">
+                <div class="pr-10">
+                    <svg fill="fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                </div>
+            </a>
+            <a class="cursor-pointer" href="https://www.instagram.com/csi.rait/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+        </div>
+        <div>
+            <ul class="flex">
+                <a href="index.html">
+                    <li class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">Home</li>
+                </a>
+                <a href="domain.html">
+                    <li class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black relative font-normal cursor-pointer text-hover">Domains</li>
+                </a>
+                <a href="members.html">
+                    <li class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">Members</li>
+                </a>
+                <a href="Events.html">
+                    <li class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">Events</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pt-6 flex lg:items-start items-center">
+            <p class="lg:text-base text-xs text-black leading-5">2022 CSI-RAIT. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/kurzt_earth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OpenCode | Home</title>
+  <link rel="icon" href="assets/favicon2.png" type="image/x-icon">
+
+  <meta property="og:title" content="OpenCode">
+  <meta property="og:description" content="OpenCode RAIT is a month long Open Source program during winters conducted by CSI RAIT, with an
+  aim to help beginners get started with Open Source Development while encouraging diversity.
+  Throughout the program, participants contribute to different projects under guidance of
+  experienced mentors. Top participants get exciting goodies and opportunities.">
+  <meta property="og:image" content="https://i.imgur.com/NjbxjDW.png">
+  <meta property="og:url" content="opencode/">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Questrial&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  <!--Fontawesome-->
+  <script src="https://kit.fontawesome.com/ce7f4069a5.js" crossorigin="anonymous"></script>
+
+  <!--Jquery-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!--Carousel CDNs-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+
+
+  <!--Custom JS-->
+  <script src="script.js"></script>
+
+
+  <link href="style.css" rel="stylesheet">
+
+</head>
+
+<body style="background-color: #202020; overflow-x: hidden;">
+
+
+
+  <canvas id=c></canvas>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+  <script src="./script.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 600) {
+          $(".navbar").css({ "background-color": "#464C52" });
+        }
+        else {
+          $(".navbar").css({ "background-color": "" });
+        }
+
+      })
+    })
+  </script>
+
+
+
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="margin: 0px;">
+
+    <div class="container-fluid">
+      <div class="navbar-brand" href="index.html">
+        <img src="assets/logo2.png" alt="CSI" style="height: 40.6px; width: 56.7px;"
+          class="d-inline-block align-text-top">
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="#aboutopencode"
+              style="font-size: 18px; font-weight: 300;">About</a>
+          </li>
+
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="#schedule"
+              style="font-size: 18px; font-weight: 300;">Schedule</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="projects.html"
+              style="font-size: 18px; font-weight: 300;">Projects</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="leaderboard.html"
+              style="font-size: 18px; font-weight: 300;">Leaderboard</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="#sponsors"
+              style="font-size: 18px; font-weight: 300;">Sponsors</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="faq.html"
+              style="font-size: 18px; font-weight: 300;">FAQs</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="team.html"
+              style="font-size: 18px; font-weight: 300;">Team</a>
+          </li>
+          <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+            <a class="nav-link active hover-up navlinks" aria-current="page" href="#contact"
+              style="font-size: 18px; font-weight: 300;">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <img class="centered d-none d-lg-block img-fluid" src="assets/logo.png"
+    style="position: absolute; color: white; font-family: 'Dancing Script', cursive; font-size: 50px;">
+  <p style="position: absolute; color: white; font-family: 'Dancing Script', cursive; font-size: 20px; margin-top: 180px;"
+    class="centered d-none d-lg-block">CSI RAIT</p>
+
+  <img class="centered d-lg-none d-md-block" src="assets/logo.png"
+    style="position: absolute; color: white; font-family: 'Dancing Script', cursive; font-size: 80px; margin-top: 50px;">
+
+  <p style="position: absolute; color: white; font-family: 'Dancing Script', cursive; font-size: 20px; margin-top: 150px;"
+    class="centered d-lg-none d-md-block">CSI RAIT</p>
+
+
+
+
+  <div class="d-none d-lg-block" style="margin-top: 50%;">
+  </div>
+
+  <div class="d-lg-none d-md-block" style="margin-top: 200%;">
+  </div>
+
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+
+
+  <div id="aboutopencode" style="background-color: #202020; height: auto;">
+    <div class="row justify-content-center" style="margin-top: 0px;">
+      <div class="col-lg-6 col-md-6 align-self-center" style="padding: 50px;">
+        <h1 style="font-family: 'Questrial', sans-serif; color: lightseagreen;">About OpenCode</h1>
+        <p style="font-family: 'Montserrat', sans-serif;">
+          <span style="color:  lightblue;">
+            OpenCode RAIT is a month long Open Source program during summers conducted by CSI RAIT, with an
+            aim to help beginners get started with Open Source Development while encouraging diversity.
+            Throughout the program, participants contribute to different projects under guidance of
+            experienced mentors. Top participants get exciting goodies and opportunities.
+        </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <img src="assets/earth.gif" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: 0px;  background-color: #202020;">
+
+
+    <div style="height: 80px;" class="d-none d-lg-block"></div>
+    <div style="height: 50px;" class="d-lg-none d-md-block"></div>
+
+    <div class="row flex-column-reverse flex-md-row justify-content-center">
+      <div class="col-lg-4 col-md-6 d-none d-lg-block">
+        <img src="assets/mars.gif" class="img-fluid">
+      </div>
+      <div class="col-lg-6 col-md-6 d-lg-none d-md-block">
+        <img src="assets/mars.gif" class="img-fluid" style="padding: 20px;">
+      </div>
+      <div class="col-lg-6 col-md-6 align-self-center" style="padding: 50px; color: white;">
+        <h1 style="font-family: 'Questrial', sans-serif;">About CSI</h1>
+        <p style="font-family: 'Montserrat', sans-serif;">
+          <span style="color: #FF9453;">CSI- RAIT </span>is a leading technical committee. It is a committee
+          that acts as a catalyst for
+          aspiring technophiles by bridging the gap between academia and industry. A platform for
+          exploring and learning.
+        </p>
+        <a href="https://csirait.in" target="_blank" class="btn btn-lg hover-up" style="background-color: #FF9453;">Official website <i class="fas fa-external-link-alt" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="background-color: #202020; height: auto" id="registration">
+    <div class="container" style="margin-top: 100px;">
+      <h1 style="text-align: center; font-family: 'Questrial', sans-serif; color: white;">Registration</h1>
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-12 m-2">
+
+          <div class="card text-center" style="border-radius: 1vw; background-color: #F093A0; min-height: 23rem;">
+            <div class="card-header"
+              style="background-color: #E3344A; border-top-left-radius: 1vw; border-top-right-radius: 1vw;">
+              <h2 style="font-family: 'Questrial', sans-serif; color: white;"><i class="fas fa-snowflake"></i>
+                Participant <i class="fas fa-snowflake"></i></h2>
+            </div>
+            <div class="card-body">
+
+              <p class="card-text" style="font-family: 'Montserrat', sans-serif;">If you have basic git
+                skills or are first timers or even veteran
+                developers, OpenCode would give you a taste of contributing in a long
+                open source projects. Continuously for a month you will contribute to your assigned
+                projects under guidance of experienced mentors. Register yourself as a participant for
+                OpenCode 2022 here.</p>
+              <br>
+              <a href="https://forms.gle/5PZQPVqzEjh7YksU7" class="btn btn-md hover-up"
+                style="color: white; background-color: #E3344A; border-radius: 1vw;">REGISTER</a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-12 m-2">
+          <div class="card text-center" style="border-radius: 1vw; background-color: #8BD0F8; min-height: 27.5rem;">
+            <div class="card-header"
+              style="background-color: #074C74; border-top-left-radius: 1vw; border-top-right-radius: 1vw;">
+              <h2 style="font-family: 'Questrial', sans-serif; color: white"><i class="fas fa-snowflake"></i> Mentor <i
+                  class="fas fa-snowflake"></i></h2>
+            </div>
+            <div class="card-body">
+
+              <p class="card-text" style="font-family: 'Montserrat', sans-serif;">Want to submit your project to
+                OpenCode? Become a mentor now! Mentors are experts on
+                the Open Source project the team is working on. At the beginning of the program, they
+                provide a roadmap for the project. They are available throughout the summer to review
+                pull requests, help with concepts and generally support the team.</p>
+              <br>
+              <a href="https://forms.gle/BZu3y8mqUWcdPqUH8" class="btn btn-md hover-up"
+                style="color: white; background-color: #074C74; border-radius: 1vw;">REGISTER</a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-md-12 m-2">
+          <div class="card text-center" style="border-radius: 1vw; background-color: #D7F4B8; min-height: 27.5rem;">
+            <div class="card-header"
+              style="background-color: #479E47; border-top-left-radius: 1vw; border-top-right-radius: 1vw;">
+              <h2 style="font-family: 'Questrial', sans-serif; color: white"><i class="fas fa-snowflake"></i> Speaker <i
+                  class="fas fa-snowflake"></i></h2>
+            </div>
+            <div class="card-body">
+
+              <p class="card-text" style="font-family: 'Montserrat', sans-serif;">Are you an expert in one
+                (or more) of the technical domains? Then be a beacon of light for our participants! As a speaker,
+                you will be conducting a professional workshop powered by CSI RAIT.</p>
+              <br><br><br><br><br><br>
+              <a href="https://forms.gle/31J64f5gEYHkjJvW8" class="btn btn-md hover-up"
+                style="color: white; background-color: #479E47; border-radius: 1vw;">REGISTER</a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div style="margin: 0px;  background-color: #202020;">
+    <div style="height: 5px;"></div>
+
+    <div class="row justify-content-center p-2">
+
+      <div style="height: 200px;" class="d-none d-lg-block"></div>
+      <div style="height: 100px;" class="d-lg-none d-md-block"></div>
+
+
+      <div class="col-lg-5 col-md-8">
+        <h1 style="color: #94B12C; font-family: 'Questrial', sans-serif;" class="d-none d-lg-block">Call for the
+          Projects</h1>
+        <h1 style="color: #94B12C; font-family: 'Questrial', sans-serif;" class="d-lg-none d-md-block"><i
+            class="fab fa-github"></i> Call for the Projects</h1>
+
+        <p style="font-family: 'Montserrat', sans-serif; color: white;" class="d-none d-lg-block">
+          If you are tech geek with a particular project idea in mind (website, app, etc.), then this is the
+          perfect opportunity for you to get it built while also helping numerous students in turn.
+        </p>
+        <p style="font-family: 'Montserrat', sans-serif; color: white; font-size: 20px" class="d-lg-none d-md-block">
+          If you are tech geek with a particular project idea in mind (website, app, etc.), then this is the
+          perfect opportunity for you to get it built while also helping numerous students in turn.
+        </p>
+
+        <a href="https://forms.gle/BZu3y8mqUWcdPqUH8" class="btn btn-md hover-up d-none d-lg-block w-50" style="background-color: #94B12C;">ADD YOUR
+          PROJECT</a>
+        <a href="https://forms.gle/BZu3y8mqUWcdPqUH8" class="btn btn-sm hover-up d-lg-none d-md-block" style="background-color: #94B12C;">ADD YOUR
+          PROJECT</a>
+
+      </div>
+      <div class="col-lg-2 d-none d-lg-block">
+        <img class="img-fluid" src="assets/github-logo.svg">
+      </div>
+    </div>
+
+
+
+    <br>
+
+    <div class="row justify-content-center p-2" style="margin-top: 0px;">
+      <div class="col-lg-2 d-none d-lg-block">
+        <i class="far fa-check-circle img-fluid" style="color: white; font-size: 12rem;"></i>
+      </div>
+      <div class="col-lg-5 col-md-8">
+        <h1 style="color: #94B12C; font-family: 'Questrial', sans-serif;" class="d-none d-lg-block">Eligibility
+        </h1>
+        <h1 style="color: #94B12C; font-family: 'Questrial', sans-serif;" class="d-lg-none d-md-block"><i
+            class="far fa-check-circle"></i> Eligibility</h1>
+
+
+        <p style="font-family: 'Montserrat', sans-serif; color: white;" class="d-none d-lg-block">
+          The CSI RAIT proudly entertains<br>
+          participation from all types of genders, age groups and countries.<br>
+          All willing candidates can apply for mentorship for an amazing<br>
+          learning and leadership experience. Also, the OpenCode,<br>
+          being open for all, provides a platform to all the participants,<br>
+          both students and professionals, to showcase their<br>
+          talent on a big level.
+        </p>
+
+        <p style="font-family: 'Montserrat', sans-serif; color: white; font-size: 20px;" class="d-lg-none d-md-block">
+          The CSI RAIT proudly entertains<br>
+          participation from all types of genders, age groups and countries.<br>
+          All willing candidates can apply for mentorship for an amazing<br>
+          learning and leadership experience. Also, the OpenCode,<br>
+          being open for all, provides a platform to all the participants,<br>
+          both students and professionals, to showcase their<br>
+          talent on a big level.
+        </p>
+
+      </div>
+    </div>
+
+    <br class="d-none d-lg-block">
+    <br class="d-none d-lg-block">
+    <br class="d-none d-lg-block">
+    <br class="d-none d-lg-block">
+    <br class="d-none d-lg-block">
+    <br class="d-none d-lg-block">
+    <br class="d-none d-lg-block">
+
+  </div>
+
+  <div class="d-lg-none d-md-block" style="height:100px;"></div>
+
+  <div class="container" style="background-color: #202020">
+
+    <h1 class="m-2" style="text-align: center; font-family: 'Questrial', sans-serif; color: white;">Prizes and Rewards
+    </h1>
+    <p style="text-align: center; font-family: 'Montserrat', sans-serif; color: #1FA69E;">Drag to check out <i
+        class="fas fa-gift"></i></p>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div id="customers-testimonials" class="owl-carousel">
+
+              <!--TESTIMONIAL 1 -->
+              <div class="item">
+                <div class="shadow-effect" style="background-color: #D7F4B8;">
+                  <img class="img-circle" src="assets/top3.png" alt="">
+                  <h2 style="font-family: 'Questrial', sans-serif;">Hey Folks!</h2>
+                  <h5 style="font-family: 'Montserrat', sans-serif;">Top 3 overall performers will get</h5>
+                  <hr>
+                  <p style="font-family: 'Montserrat', sans-serif;">Exculusive Goodies</p>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 1 -->
+              <!--TESTIMONIAL 2 -->
+              <div class="item">
+                <div class="shadow-effect" style="background-color: white;">
+                  <img class="img-circle" src="assets/dypatillogo-alt.png" alt="">
+                  <h2 style="font-family: 'Questrial', sans-serif;">Hey Folks!</h2>
+                  <h5 style="font-family: 'Montserrat', sans-serif;">Top 3 performers from Ramrao Adik Institute of Technology will get</h5>
+                  <hr>
+                  <p style="font-family: 'Montserrat', sans-serif;">Tshirts, Swags<br>etc</p>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 2 -->
+              <!--TESTIMONIAL 3 -->
+              <div class="item">
+                <div class="shadow-effect" style="background-color: #FFC3C2;">
+                  <img class="img-circle" src="assets/girl.png" alt="">
+                  <h2 style="font-family: 'Questrial', sans-serif;">Hey Folks!</h2>
+                  <h5 style="font-family: 'Montserrat', sans-serif;">Top 3 girl performers will get</h5>
+                  <hr>
+                  <p style="font-family: 'Montserrat', sans-serif;">Tshirts, Swags<br>etc</p>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 3 -->
+              <!--TESTIMONIAL 4 -->
+              <div class="item">
+                <div class="shadow-effect" style="background-color: #B7CFF5;">
+                  <img class="img-circle" src="assets/top-10.png" alt="">
+                  <h2 style="font-family: 'Questrial', sans-serif;">Hey Folks!</h2>
+                  <h5 style="font-family: 'Montserrat', sans-serif;">Top 10 overall performers will get</h5>
+                  <hr>
+                  <p style="font-family: 'Montserrat', sans-serif;">Tshirts, Swags<br>etc</p>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 4 -->
+              <!--TESTIMONIAL 5 -->
+              <div class="item">
+                <div class="shadow-effect" style="background-color: #FFF199;">
+                  <img class="img-circle" src="assets/certificate.png" alt="">
+                  <h2 style="font-family: 'Questrial', sans-serif;">Hey Folks!</h2>
+                  <h5 style="font-family: 'Montserrat', sans-serif;">All participants with atleast one
+                    PR merged will receive</h5>
+                  <hr>
+                  <p style="font-family: 'Montserrat', sans-serif;">Digital certficates</p>
+                </div>
+              </div>
+              <!--END OF TESTIMONIAL 5 -->
+              <!--TESTIMONIAL 6 -->
+              <!-- <div class="item">
+                        <div class="shadow-effect">
+                            <img class="img-circle"
+                                src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg" alt="">
+                            <p>Dramatically maintain clicks-and-mortar solutions without functional solutions.
+                                Completely synergize resource taxing relationships via premier niche markets.
+                                Professionally cultivate.</p>
+                        </div>
+                        <div class="testimonial-name">MICHAEL TEDDY</div>
+                    </div> -->
+              <!--END OF TESTIMONIAL 6 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF TESTIMONIALS -->
+
+  </div>
+
+  <script>
+    jQuery(document).ready(function ($) {
+      "use strict";
+      //  TESTIMONIALS CAROUSEL HOOK
+      $('#customers-testimonials').owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        dots: true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1170: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
+
+  <div style="margin: 0px; ; background-color: #202020;">
+    <div style="height: 5px;"></div>
+
+    <div style="height: 60px;" class="d-none d-lg-block"></div>
+    <div style="height: 100px;" class="d-lg-none d-md-block"></div>
+
+    <div class="row flex-column-reverse flex-md-row justify-content-center">
+      <div class="col-lg-4 col-md-12 d-none d-lg-block">
+        <img src="https://data.whicdn.com/images/341801184/original.gif" class="img-fluid">
+      </div>
+      <div class="col-lg-6 col-md-12 d-lg-none d-md-block">
+        <img src="https://data.whicdn.com/images/341801184/original.gif" class="img-fluid"
+          style="height: 150px; width: 150px; float: right;">
+      </div>
+      <div class="col-lg-6 col-md-12 align-self-center" style="padding: 20px; color: white;">
+        <h1 style="font-family: 'Questrial', sans-serif; color: #FFC0FF;" class="d-none d-lg-block">How does it work?
+        </h1>
+        <h1 style="font-family: 'Questrial', sans-serif; color: #FFC0FF;" class="d-lg-none d-md-block">How does it work?
+        </h1>
+        <p style="font-family: 'Montserrat', sans-serif;" class="d-none d-lg-block">
+          <span style="color: #FFC0FF;">OpenCode</span> is a month long open source project under <span
+            style="color: #FFC0FF;">CSI RAIT</span>. In this
+          hackathon, all the registered participants would get an exquisite opportunity to interact with
+          the mentors and the Organizing Team from 4th April 2022 to 9th April 2022.
+
+          In this period they can extract any help or can resolve any sort of query or uncertainty that they
+          might be having regarding the projects or it’s implementation. The team and the mentors will
+          endeavour to provide the required help from their best possible resources. From 4th April 2022
+          onwards,
+          the mentors will be declaring the issues of the Open Source Projects and the admins will be looking
+          after the final structuring of the websites. If a participant is willing to work on a project,
+          he/she will have to comment on the issue and make a pull request and if the mentor finds the work
+          satisfactory, the participant would get the opportunity to work for the same.
+
+          The claiming of issues by the participants will be on a first come-first served basis. The
+          participants would be continuously evaluated on all the projects that they contribute to and thereby
+          the mentors will have to maintain a leaderboard and submit a weekly evaluation of their respective
+          mentees.
+
+          After the conclusion of event the leaderboards of the mentors would be taken into consideration by
+          the organizing team for the final evaluation of the participants and the result would be declared.
+        </p>
+        <p style="font-family: 'Montserrat', sans-serif; font-size: 20px;" class="d-lg-none d-md-block">
+          <span style="color: #FFC0FF;">OpenCode</span> is a month long open source project under <span
+            style="color: #FFC0FF;">CSI RAIT</span>. In this
+          hackathon, all the registered participants would get an exquisite opportunity to interact with
+          the mentors and the Organizing Team from 4th April 2022 to 9th April 2022.
+
+          In this period they can extract any help or can resolve any sort of query or uncertainty that they
+          might be having regarding the projects or it’s implementation. The team and the mentors will
+          endeavour to provide the required help from their best possible resources. From 4th April 2022
+          onwards,
+          the mentors will be declaring the issues of the Open Source Projects and the admins will be looking
+          after the final structuring of the websites. If a participant is willing to work on a project,
+          he/she will have to comment on the issue and make a pull request and if the mentor finds the work
+          satisfactory, the participant would get the opportunity to work for the same.
+
+          The claiming of issues by the participants will be on a first come-first served basis. The
+          participants would be continuously evaluated on all the projects that they contribute to and thereby
+          the mentors will have to maintain a leaderboard and submit a weekly evaluation of their respective
+          mentees.
+
+          After the conclusion of event the leaderboards of the mentors would be taken into consideration by
+          the organizing team for the final evaluation of the participants and the result would be declared.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id='stars'></div>
+  <div id='stars2'></div>
+  <div id='stars3'></div>
+
+  <div id="sponsors" style="background-color: #202020; height: auto">
+    <div class="container" style="margin-top: 100px;">
+      <h1 style="text-align: center; font-family: 'Questrial', sans-serif; color: #9979cc;">Our Sponsors</h1>
+      <br>
+      <p style="font-family: 'Montserrat', sans-serif; text-align: center; color: white;">
+        Sponsors make it possible for CSI RAIT to provide the perks for participants. Their
+        generous<br> donations allow students to participate in the program and focus on learning. Sponsors
+        receive
+        a great deal of<br> publicity and exposure as a result of the program. So register to be a sponsor
+        today!
+      </p>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="row justify-content-center">
+        <!-- <div class="col-lg-4 col-md-6">
+
+          <a href="https://www.hackerrank.com" target="_blank" class="card text-dark bg-light mb-3 hover-up"
+            style="max-width: 18rem; margin: auto;">
+            <div class="card-body">
+              <img src="assets/hackerrank.png" class="img-fluid">
+            </div>
+          </a>
+
+        </div>  
+        <div class="col-lg-4 col-md-6">
+          <a href="https://github.com" target="_blank" class="card text-dark bg-light mb-3 hover-up"
+            style="max-width: 18rem; margin: auto;">
+            <div class="card-body">
+              <img src="assets/github.png" class="img-fluid">
+            </div>
+          </a>
+        </div> -->
+
+        <div class="col-lg-3 col-md-6">
+          <a href="https://crazymonk.in" target="_blank" class="card text-dark bg-light mb-3 hover-up"
+            style="max-width: 18rem; margin: auto; min-height: 170px;">
+            <div class="card-body">
+              <img src="assets/Crazymonk-logo.png" class="img-fluid" style="margin-top: 8%;">
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <a href="http://www.dypatil.edu/mumbai/rait/" target="_blank" class="card text-dark bg-light mb-3 hover-up"
+            style="max-width: 18rem; margin: auto;">
+            <div class="card-body">
+              <img src="assets/dypatil.png" class="img-fluid">
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <a href="https://github.com" target="_blank" class="card text-dark bg-light mb-3 hover-up"
+            style="max-width: 18rem; margin: auto;">
+            <div class="card-body">
+              <img src="assets/github-logo.png" class="img-fluid">
+            </div>
+          </a>
+        </div>
+
+
+
+
+      </div>
+
+      <br>
+      <br>
+      <div class="row justify-content-center">
+        <a href="https://forms.gle/YyU1iY6tQLCSstv1A" class="btn btn-lg hover-up"
+          style="width: auto; background-color: #9979cc; font-family: 'Questrial', sans-serif; color: white;">
+          SPONSOR US
+      </a>
+      </div>
+
+
+    </div>
+  </div>
+
+  <br>
+
+  <div id="schedule"
+    style="margin: 0px;  background-color: #202020; background-repeat: no-repeat; background-repeat: repeat-x;">
+
+    <div style="height: 200px;"></div>
+
+    <div class="row">
+      <h1 style="text-align: center; font-family: 'Questrial', sans-serif; color: #00F9FF;">Schedule</h1>
+
+    </div>
+
+    <section class="timeline d-none d-lg-block" style="margin: 0px;">
+      <ul>
+        <li class="memory">
+          <div class="memory-container">
+            <p class="memory-date">28th March - 4th April</p>
+            <p class="memory-text"> <img src="assets/assignment.png" height="50" width="50" class="img-fluid" alt="">
+              Registration phase for mentors, speakers and participants</p>
+          </div>
+        </li>
+        <div class="memory">
+          <div class="memory-container">
+            <div class="memory-date">4th April</div>
+            <div class="memory-text"><img src="assets/project.png" height="50" width="50" class="img-fluid" alt="">
+              Projects announced</div>
+          </div>
+        </div>
+        <div class="memory">
+          <div class="memory-container">
+            <div class="memory-date">4th April - 9th April</div>
+            <div class="memory-text"><img src="assets/community.png" height="50" width="50" class="img-fluid" alt="">
+              The Community Bonding sessions</div>
+          </div>
+        </div>
+        <div class="memory">
+          <div class="memory-container">
+            <div class="memory-date">4th April - 30th April</div>
+            <div class="memory-text"><img src="assets/contribution.png" height="50" width="50" class="img-fluid" alt="">
+              Contribution Starts</div>
+          </div>
+        </div>
+        <div class="memory">
+          <div class="memory-container">
+            <div class="memory-date">30th April</div>
+            <div class="memory-text"><img src="assets/finish.png" height="50" width="50" class="img-fluid" alt="">
+              Contribution Ends</div>
+          </div>
+        </div>
+        <div class="memory">
+          <div class="memory-container">
+            <div class="memory-date">15th May</div>
+            <div class="memory-text"><img src="assets/leaderboard.png" height="50" width="50" class="img-fluid" alt="">
+              Results Declaration & Prizes Distribution</div>
+          </div>
+        </div>
+
+
+      </ul>
+
+      <br>
+    </section>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+
+    <div style="height: 20px;" class="d-lg-none d-md-block"></div>
+
+
+    <div class="row justify-content-center d-lg-none d-md-block">
+
+      <div class="card text-white  mb-3 col-12" style="max-width: 18rem; background-color: #52B3D9; margin: auto;">
+        <div class="card-header" style=" color: #021723; font-family: 'Questrial', sans-serif; ">
+          28th March - 4th April
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p class="card-text" style=" color: #021723; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+                Registration phase for mentors, speakers and participants
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="assets/assignment.png" height="50" width="50" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-white  mb-3 col-12" style="max-width: 18rem; background-color: #52B3D9;margin: auto;">
+        <div class="card-header" style=" color: #021723; font-family: 'Questrial', sans-serif; ">
+          4th April
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p class="card-text" style=" color: #021723; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+                Projects announced
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="assets/project.png" height="50" width="50" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-white  mb-3 col-12" style="max-width: 18rem; background-color: #52B3D9;margin: auto;">
+        <div class="card-header" style=" color: #021723; font-family: 'Questrial', sans-serif; ">
+          4th April - 9th April
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p class="card-text" style=" color: #021723; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+                The Community Bonding sessions
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="assets/community.png" height="50" width="50" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-white  mb-3 col-12" style="max-width: 18rem; background-color: #52B3D9;margin: auto;">
+        <div class="card-header" style=" color: #021723; font-family: 'Questrial', sans-serif; ">
+          4th April - 30th April
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p class="card-text" style=" color: #021723; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+                Contribution Starts
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="assets/contribution.png" height="50" width="50" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-white  mb-3 col-12" style="max-width: 18rem; background-color: #52B3D9; margin: auto;">
+        <div class="card-header" style=" color: #021723; font-family: 'Questrial', sans-serif; ">
+          30th April
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p class="card-text" style=" color: #021723; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+                Contribution Ends
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="assets/finish.png" height="50" width="50" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-white  mb-3 col-12" style="max-width: 18rem; background-color: #52B3D9; margin: auto;">
+        <div class="card-header" style=" color: #021723; font-family: 'Questrial', sans-serif; ">
+          15th May
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-8">
+              <p class="card-text" style=" color: #021723; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+                Results Declaration & Prizes Distribution
+              </p>
+            </div>
+            <div class="col-4">
+              <img src="assets/leaderboard.png" height="50" width="50" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+  </div>
+
+  <style>
+
+  </style>
+
+  <script>
+    var memories = document.querySelectorAll(".memory-container"); // All the memories that appear as we scroll down the timeline
+    var circles = document.querySelectorAll(".memory"); // The greater memory element, but visually, simply the circle attached to the timeline.
+
+    function elementInView(el) {
+      // The vertical distance between the top of the page and the top of the element.
+      var elementOffset = $(el).offset().top;
+      // The height of the element, including padding and borders.
+      var elementOuterHeight = $(el).outerHeight();
+      // Height of the window without margins, padding, borders.
+      var windowHeight = $(window).height();
+      // The vertical distance between the top of the page and the top of the viewport.
+      var scrollOffset = $(this).scrollTop();
+
+      if (elementOuterHeight < windowHeight) {
+        // Element is smaller than viewport.
+        if (scrollOffset > (elementOffset + elementOuterHeight - windowHeight)) {
+          // Element is completely inside viewport, reveal the element!
+          return true;
+        }
+      } else {
+        // Element is larger than the viewport, handle visibility differently.
+        // Consider it visible as soon as it's top half has filled the viewport.
+        if (scrollOffset > elementOffset) {
+          // The top of the viewport has touched the top of the element, reveal the element!
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function handler() {
+      for (var i = 0; i < circles.length; i++) {
+        if (elementInView(circles[i])) {
+          memories[i].classList.add("in-view");
+          circles[i].classList.add("in-view");
+        }
+      }
+    }
+
+    $(window).on('DOMContentLoaded load resize scroll', handler);
+  </script>
+
+  <br>
+
+  <div id="contact" class="row justify-content-center" style="background-color: #021723; color: white;">
+    <h3 style="font-family: 'Questrial', sans-serif; text-align: center; margin-top: 50px;"> <img src="assets/logo2.png"
+        alt="oc" style="height: 40.6px; width: 56.7px;" class="img-fluid"> | OpenCode</h3>
+    <hr style="width: 75%;">
+    <p style="text-align: center; font-family: 'Montserrat', sans-serif; text-align: center;">
+      CSI RAIT is one of the fastest growing tech-community in India. OpenCode is a non-profit<br>
+      project brought to you by CSI RAIT to help beginners in<br>
+      technology. Be a part, spread knowledge & happiness.</p>
+
+    <p style="text-align: center; font-size: 25px; color: #021723;">
+
+      <a href="https://csirait.in" target="_blank" style="text-decoration: none;"><img src="assets/csi-logo.png"
+          target="_blank" class="hover-up"
+          style="height: 25px; width: 25px; margin-bottom: 7px; margin-right: 5px;"></a>
+      <a href="https://wa.me/+917066695395?text=I%20am%20interested%20" target="_blank"
+        style="text-decoration: none;"><i class="fab fa-whatsapp footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.instagram.com/csi.rait/" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-instagram footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.youtube.com/channel/UCs8N_fX2lLsoLZj6pPPjVWQ" target="_blank"
+        style="text-decoration: none;"><i class="fab fa-youtube footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.facebook.com/csirait.official/" target="_blank" target="_blank"
+        style="text-decoration: none;"><i class="fab fa-facebook footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://github.com/csi-rait" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-github footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.linkedin.com/in/csi-rait/" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-linkedin-in footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://discord.gg/EQfTxTBnBd" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-discord footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="mailto:info.csirait@gmail.com" target="_blank" style="text-decoration: none;"><i
+          class="fas fa-envelope footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://decrypt.org.in" target="_blank" style="text-decoration: none;"><img src="assets/decrypt-logo.png"
+          class="hover-up" style="height: 25px; width: 25px; margin-bottom: 7px;"></a>
+
+    </p>
+
+    <br><br><br>
+
+    <p style="text-align: center; color: white; font-family: 'Montserrat', sans-serif;">
+      Made with <i class="fas fa-heart" style="color: #E3344A;"></i> by <a href="https://csirait.in"
+        style="text-decoration: none;"><span style="color: #003399; font-weight: 700;">CSI RAIT</span></a>
+    </p>
+
+    <p
+      style="font-size: 10px; font-family: 'Montserrat', sans-serif; background-color: #202020; text-align: center; color: white; margin: 0px; padding: 5px;">
+      Copyright © 2022 | Computer Society of India, RAIT | All rights reserved
+    </p>
+
+  </div>
+
+
+  <style>
+    .centered {
+      margin: auto;
+      text-align: center;
+      top: 40%;
+      left: 25%;
+      width: 50%;
+
+      padding: 10px;
+    }
+
+    .dg.main.a {
+      visibility: hidden;
+    }
+
+    canvas {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: black;
+    }
+  </style>
+
+</body>
+
+
+</html>

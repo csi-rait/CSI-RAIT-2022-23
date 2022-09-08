@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+
+    <meta property="og:title" content="CSI RAIT">
+    <meta property="og:description" content="Formed in 1965, the Computer Society of India has been instrumental in guiding the Indian IT industry on the right path since its formative years. Today, the CSI has 70 chapters all over India, 418 student branches and more than 90000 members including India’s most famous IT industry leaders, brilliant scientists and dedicated academicians.">
+
+    <meta property="og:image" content="https://i.imgur.com/XRflgCF.png">
+
+    <link rel="icon" href="./assets/images/csi-logo.png" type="image/x-icon">
+
+    <title>CSI | Domains</title>
+</head>
+
+<body style="cursor: url(./assets/images/blue.png) 15 15,auto;">
+    <div class="bg-linear-pink lg:pb-28">
+        <div class="mx-auto container">
+            <nav class="lg:hidden relative z-50">
+                <div class="flex py-2 justify-between items-center px-4">
+                    <div>
+                        <img src="assets/images/csi-logo.png" class=" w-20 ">
+                    </div>
+                    <div class="visible flex items-center">
+                        <ul id="list"
+                            class="hidden p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24">
+                            <li
+                                class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                <a href="./index.html">
+                                    <span class="ml-2 font-bold">Home</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                                onclick="dropdownHandler(this)">
+                                <a href="./domain.html">
+                                    <span class="ml-2 font-bold">Domain</span>
+                                </a>
+                            </li>
+                            <li
+                                class="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <a href="./members.html">
+                                    <span class="ml-2 font-bold">Members</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                                onclick="dropdownHandler(this)">
+                                <a href="./Events.html">
+                                    <span class="ml-2 font-bold">Events</span>
+                                </a>
+                            </li>
+                            <li class="flex flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                                onclick="dropdownHandler(this)">
+                                <a href="opencode/">
+                                    <span class="ml-2 font-bold">OpenSource</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="xl:hidden">
+                            <svg id="open" onclick="MenuHandler(true)" aria-haspopup="true" aria-label="Main Menu"
+                                xmlns="http://www.w3.org/2000/svg" class="show-m-menu icon icon-tabler icon-tabler-menu"
+                                width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"></path>
+                                <line x1="4" y1="8" x2="20" y2="8"></line>
+                                <line x1="4" y1="16" x2="20" y2="16"></line>
+                            </svg>
+                            <div id="close" class="hidden close-m-menu" onclick="MenuHandler(false)">
+                                <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="f-f-l relative z-10">
+                <div
+                    class="relative z-10 mx-auto hidden container w-full lg:px-4 xl:px-0 lg:flex justify-between items-center py-11">
+                    <div>
+                        <img src="assets/images/csi-logo.png" class=" w-20 ">
+                    </div>
+                    <div class="flex items-center text-lg font-bold">
+                        <ul class="flex items-center pr-12">
+                            <li class="cursor-pointer text-color-1"><a href="./index.html">Home</a></li>
+                            <li class="xl:pl-8 lg:pl-5 cursor-pointer text-color-1"><a href="./domain.html">Domain</a>
+                            </li>
+                            <li class="xl:pl-8 lg:pl-5 cursor-pointer text-color-1"><a href="./members.html">Members</a>
+                            </li>
+                            <li class="xl:pl-8 lg:pl-5 cursor-pointer text-color-1"><a href="./Events.html">Events</a>
+                            </li>
+                        </ul>
+                        <a href="opencode/"
+                            class="py-3 px-6 bg-white bg-linear-button-about-us text-white text-lg font-bold flex items-center justify-center">
+                            OpenSource
+                            <svg class="ml-4" xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M9.129 5.24952L5.106 1.22652L6.1665 0.166016L12 5.99952L6.1665 11.833L5.106 10.7725L9.129 6.74952H0V5.24952H9.129Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="mx-auto container w-full flex justify-center items-center flex-col">
+                <div class="flex flex-col w-full mx-auto container items-center justify-center pt-10 lg:pt-28 f-f-l">
+                    <h1
+                        class="text-2xl md:text-5xl xl:text-8xl text-center font-black text-color-gradient md:leading-tight xl:leading-snug">
+                        To Inspire And <br> Integrate Students ...
+                    </h1>
+                    <h2
+                        class="pt-4 lg:pt-16 w-9/12 f-f-r text-color  text-xl lg:text-lg lg:text-3xl text-center lg:leading-10">
+                        At CSI-RAIT, We strive to capture talent and ideas abundantly. We offer a platform to display
+                        your insights and aim to stimulate new ideas </h2>
+                    <h2 class="w-8/12 f-f-r text-color  text-xl lg:text-3xl text-center lg:leading-10">and ignite the
+                        curiosity concept. The different domains help students to inspire, act and truly believe in
+                        themselves.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-full mt-20 flex flex-col items-center justify-center pb-5 lg:pb-40">
+        <div class="w-full lg:w-9/12 h-0.5 background-brands"></div>
+        <div
+            class="flex lg:flex-row flex-col items-center justify-center lg:justify-between pt-16 border-brands w-full lg:w-9/12 f-f-l">
+            <div class="pb-4 lg:pb-0">
+                <img src="./assets/images/HackerRank_wordmark-299x66-0cee85e.png">
+            </div>
+            <div class="py-4 w-40 lg:py-0">
+                <div class="pb-4 lg:pb-0">
+                    <img src="./assets/images/GitHub_Logo.png">
+                </div>
+            </div>
+            <div class="py-4 w-40 lg:py-0">
+                <div class="pb-4 lg:pb-0">
+                    <img src="./assets/images/Rait_new_logo_png.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto container py-10 lg:pt-52 lg:pb-20">
+        <h1 class="text-color font-black f-f-l text-center text-3xl lg:text-7xl">Domains At CSI-RAIT</h1>
+    </div>
+    <div class="bg-linear-about-us py-16">
+        <div class=" container xl:w-full w-11/12 mx-auto ">
+            <div role="list" class=" sm:flex flex-wrap ">
+
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Technical</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Research Wing</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Editorial</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Creative</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Design</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Sponsorship</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Membership</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Publicity</h1>
+
+                        </div>
+                    </div>
+                </div>
+                <div role="listitem" class="w-full sm:w-1/2 md:w-1/3 p-2 pt-4">
+                    <div class="max-w-lg shadow-md rounded border border-gray-200 bg-white">
+                        <div class="flex flex-col items-center py-8">
+
+                            <h1 class="text-color text-center font-bold text-4xl">Database Administrator</h1>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto container px-4 xl:px-0 py-10 xl:py-40">
+        <div class="">
+            <div class="flex flex-wrap items-center">
+                <div class="lg:w-56 w-full">
+
+                </div>
+                <div class="lg:w-3/5 w-full">
+                    <div class="lg:pl-8 py-2 text-color">
+                        <h1 class="text-color-gradient text-3xl xl:text-9xl leading-snug f-f-l font-black">ˮ</h1>
+                        <h2 class="text-xl lg:text-3xl leading-7 lg:leading-10 f-f-r">Ever so often, simply
+                            by being a part of a community, we are presented with opportunities to learn and grow beyond
+                            limitations. We at CSI-RAIT aim to bring together a new generation of programmers and coders
+                            to explore the power of technology in a way that’s vast, inclusive, and accessible. Together
+                            we can bring about the change we seek in hopes of building a stronger, modern, and more
+                            innovative society.</h2>
+                        <div class="flex items-center py-6">
+                            <div class="flex items-center justify-center rounded-full w-16 h-16">
+                                <img class="rounded-full" src="./assets/images/Vedant.png" alt="" />
+                            </div>
+                            <div class="pl-3">
+                                <h3 class="f-f-l text-xl lg:text-2xl">Vedant Pimple</h3>
+                                <h4 class="f-f-r text-md pt-2">President,CSI-RAIT</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto container pb-12">
+        <div class="w-full flex justify-center">
+            <div class="w-full lg:w-10/12 bg-linear-member px-12 py-16 rounded-md">
+                <div>
+                    <div class="flex flex-wrap">
+                        <div class="md:w-2/3 w-full pb-6 md:pb-0 md:pr-6 f-f-l  f-f-l">
+                            <h1 class="text-2xl lg:text-5xl lg:w-9/12 text-white font-black leading-tight">Become a
+                                member and start building the next big thing</h1>
+                                <a href="https://forms.gle/BcGXCKMTDEJqBAaUA"><button class="mt-5 lg:mt-12 py-4 px-4 lg:px-6 bg-white  font-bold text-color-pink rounded-lg text-lg lg:text-xl hover:bg-gray-100 ease-in-out">Join the community</button></a>
+                        </div>
+                        <div class="md:w-1/3 w-full">
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="flex items-center mt-8">
+                                    <div class="w-20 h-20 rounded-full mr-3">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png" alt="" />
+                                    </div>
+                                    <div class="w-20 h-20 rounded-full">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <div class="w-20 h-20 rounded-full mr-3">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png" alt="" />
+                                    </div>
+                                    <div class="w-20 h-20 rounded-full mr-3">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(2).png" alt="" />
+                                    </div>
+                                    <div class="w-20 h-20 rounded-full">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="flex items-center mt-4">
+                                    <div class="w-20 h-20 rounded-full mr-3">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(1).png" alt="" />
+                                    </div>
+                                    <div class="w-20 h-20 rounded-full">
+                                        <img class="w-full h-full"
+                                            src="https://cdn.tuk.dev/assets/templates/prodify/avatar(3).png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="bg-indigo-300 py-6 flex flex-col items-center justify-center f-f-l rounded-t-3xl">
+        <div class="w-44">
+            <img loading="lazy" src="assets/images/csi-logo.png" />
+        </div>
+        <div class="flex items-center py-6">
+            <a class="cursor-pointer" href="https://www.linkedin.com/in/csi-rait/">
+                <div class="pr-10">
+                    <svg fill="fff" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                    </svg>
+                </div>
+            </a>
+            <a class="cursor-pointer" href="https://www.instagram.com/csi.rait/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+            </a>
+        </div>
+        <div>
+            <ul class="flex">
+                <a href="index.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
+                        Home</li>
+                </a>
+                <a href="domain.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black relative font-normal cursor-pointer text-hover">
+                        Domains</li>
+                </a>
+                <a href="members.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
+                        Members</li>
+                </a>
+                <a href="Events.html">
+                    <li
+                        class="lg:text-lg text-sm text-sm leading-5 lg:mr-10 mr-2 text-black flex flex-col items-end justify-end font-normal cursor-pointer text-hover">
+                        Events</li>
+                </a>
+            </ul>
+        </div>
+        <div class="pt-6 flex lg:items-start items-center">
+            <p class="lg:text-base text-xs text-black leading-5">2022 CSI-RAIT. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

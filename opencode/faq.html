@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode | FAQs</title>
+    <link rel="icon" href="assets/favicon2.png" type="image/x-icon">
+
+    <meta property="og:title" content="OpenCode">
+    <meta property="og:description" content="OpenCode RAIT is a month long Open Source program during winters conducted by CSI RAIT, with an
+    aim to help beginners get started with Open Source Development while encouraging diversity.
+    Throughout the program, participants contribute to different projects under guidance of
+    experienced mentors. Top participants get exciting goodies and opportunities.">
+    <meta property="og:image" content="https://i.imgur.com/NjbxjDW.png">
+    <meta property="og:url" content="opencode/">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Questrial&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/ce7f4069a5.js" crossorigin="anonymous"></script>
+
+    <!--Custom JS-->
+    <script src="script.js"></script>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--Carousel CDNs-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body style="background-color: #202020; overflow-x: hidden;">
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+  
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 100) {
+                    $(".navbar").css({ "background-color": "#464C52" });
+                }
+                else {
+                    $(".navbar").css({ "background-color": "" });
+                }
+
+            })
+        })
+    </script>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="margin: 0px;">
+        <div class="container-fluid">
+            <div class="navbar-brand" href="index.html">
+                <img src="assets/logo2.png" alt="CSI" style="height: 40.6px; width: 56.7px;"
+          class="d-inline-block align-text-top">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page"
+                            href="index.html#aboutopencode" style="font-size: 18px; font-weight: 300;">About</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="index.html#schedule"
+                            style="font-size: 18px; font-weight: 300;">Schedule</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="projects.html"
+                            style="font-size: 18px; font-weight: 300;">Projects</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="leaderboard.html"
+                            style="font-size: 18px; font-weight: 300;">Leaderboard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="index.html#sponsors"
+                            style="font-size: 18px; font-weight: 300;">Sponsors</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="faq.html"
+                            style="font-size: 18px; font-weight: 300;">FAQs</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="team.html"
+                            style="font-size: 18px; font-weight: 300;">Team</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="#contact"
+                            style="font-size: 18px; font-weight: 300;">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+  
+    
+
+    <div
+        style="margin: 0px;background-color: #202020; background-repeat: no-repeat; background-repeat: repeat-x;">
+
+        <div style="height: 200px;"></div>
+
+        <div class="row">
+
+            <h1 style="text-align: center; font-family: 'Questrial', sans-serif; color: white;">FAQs</h1>
+            <p style="font-family: 'Montserrat', sans-serif; text-align: center; color: white;" class="text-muted">
+                Frequently Asked Questions</p>
+
+            <div class="faq">
+                <div class="containerfaq">
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Will a
+                                    beginner, with absolutely no knowledge of github, gain anything
+                                    fruitful?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>Yeah, definitely. The organization is meant to assist the beginners grow in the field
+                                    of development. We'll have distinct projects appropriate both for beginners as well
+                                    as the accolades and thereby we’ll make sure that each and every participant gets to
+                                    learn something new from the projects he or she is contributing for.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Is there
+                                    any registration fee?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>No, there is no registration fees for participation. It is absolutely free of cost.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Any age
+                                    limit for participation?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>No, there is no age limit for participation in OpenCode. It is open for all.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How will
+                                    we receive the prizes (if won) and certificate?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>We’ll be providing all the participants with the digital certificate. The prize money
+                                    to all the concerned students will be sent to their bank accounts. We’ll ask for the
+                                    bank account details via an email after the conclusion of the event.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">By what
+                                    time will the result come?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>The results will tentaively be declared around mid May.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-6" aria-expanded="false"><span class="accordion-title">What
+                                    minimum conditions should the project satisfy?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>There are no such conditions that the projects need to satisfy. The mentors can
+                                    propose the idea in any field that they specifically expertise in.</p>
+                            </div>
+                        </div>
+                        <!-- <div class="accordion-item">
+                            <button id="accordion-button-7" aria-expanded="false"><span class="accordion-title">Is it
+                                    strictly for girls or can boys also participate?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>GirlScript aims to assist anyone who is new in the field of development and it
+                                    specifically supports an inclusive environment. Thereby GSSOC is open both for girls
+                                    and for boys . Everyone can participate and contribute their part in the development
+                                    of open source community and our initiative.</p>
+                            </div>
+                        </div> -->
+                        <div class="accordion-item">
+                            <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">From
+                                    where do we need to start being a beginner as of now so as contribute properly in
+                                    the projects?</span><span class="icon" aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>We’ll be providing you with the links on our official website to start with Github
+                                    and various other development to make sure that everyone is able to aptly contribute
+                                    for the projects.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">How will
+                                    participants communicate with mentors and admins?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>All communication will happen on the appropriate channel of the discord server for
+                                    the particular project.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">How will
+                                    I know that I am selected?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>
+                                    The participants will be notified through email and the invite to the Discord server
+                                    will be sent to them.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button id="accordion-button-8" aria-expanded="false"><span class="accordion-title">What is
+                                    the criterion for selection as a participant?</span><span class="icon"
+                                    aria-hidden="true"></span></button>
+                            <div class="accordion-content">
+                                <p>This program is for beginners to get started with open source. The only criterion for
+                                    selection are your dedication and enthusiasm to contribute to open source.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+                    
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <a href="https://forms.gle/KeHCC1UxTCUUvWSLA" class="btn btn-md hover-up" style="background-color: lightseagreen; color: white;">GOT ANY
+                            OTHER QUERIES?</a>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- partial -->
+            <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
+        </div>
+
+
+
+    </div>
+
+    
+
+
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .faq {
+            margin: 0;
+            padding: 0;
+            font-family: "Hind", sans-serif;
+            background: #202020;
+            color: #4d5974;
+            display: flex;
+            min-height: 100vh;
+
+        }
+
+        .containerfaq {
+            margin: 0 auto;
+            padding: 4rem;
+            width: 48rem;
+
+        }
+
+        .accordion .accordion-item {
+            border-bottom: 1px solid #202020;
+            background-color: #202020;
+            padding: 10px;
+            /* border: 0.1px solid white; */
+        }
+
+        .accordion .accordion-item button[aria-expanded=true] {
+            border-bottom: 1px solid #03b5d2;
+
+        }
+
+        .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #7288a2;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .accordion button:hover,
+        .accordion button:focus {
+            cursor: pointer;
+            color: #03b5d2;
+        }
+
+        .accordion button:hover::after,
+        .accordion button:focus::after {
+            cursor: pointer;
+            color: #03b5d2;
+            border: 1px solid #03b5d2;
+        }
+
+        .accordion button .accordion-title {
+            padding: 1em 1.5em 1em 0;
+        }
+
+        .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+
+        }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+        .accordion button[aria-expanded=true] {
+            color: #03b5d2;
+        }
+
+        .accordion button[aria-expanded=true] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded=true]+.accordion-content {
+            opacity: 1;
+            max-height: 19em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content {
+            color: white;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
+
+        #stars:after{
+            top: 0px;
+        }
+        #stars2:after{
+            top: 0px;
+        }
+        #stars3:after{
+            top: 0px;
+        }
+
+    </style>
+
+<div id="contact" class="row justify-content-center" style="background-color: #021723; color: white;">
+    <h3 style="font-family: 'Questrial', sans-serif; text-align: center; margin-top: 50px;"> <img src="assets/logo2.png" alt="oc" style="height: 40.6px; width: 56.7px;"
+        class="img-fluid"> | OpenCode</h3>
+    <hr style="width: 75%;">
+    <p style="text-align: center; font-family: 'Montserrat', sans-serif; text-align: center;">
+      CSI RAIT is one of the fastest growing tech-community in India. OpenCode is a non-profit<br>
+      project brought to you by CSI RAIT to help beginners in<br>
+      technology. Be a part, spread knowledge & happiness.</p>
+
+    <p style="text-align: center; font-size: 25px; color: #021723;">
+
+      <a href="https://csirait.in" target="_blank" style="text-decoration: none;"><img src="assets/csi-logo.png"
+          target="_blank" class="hover-up"
+          style="height: 25px; width: 25px; margin-bottom: 7px; margin-right: 5px;"></a>
+      <a href="https://wa.me/+917066695395?text=I%20am%20interested%20" target="_blank"
+        style="text-decoration: none;"><i class="fab fa-whatsapp footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.instagram.com/csi.rait/" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-instagram footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.youtube.com/channel/UCs8N_fX2lLsoLZj6pPPjVWQ" target="_blank"
+        style="text-decoration: none;"><i class="fab fa-youtube footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.facebook.com/csirait.official/" target="_blank" target="_blank"
+        style="text-decoration: none;"><i class="fab fa-facebook footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://github.com/csi-rait" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-github footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://www.linkedin.com/in/csi-rait/" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-linkedin-in footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://discord.gg/EQfTxTBnBd" target="_blank" style="text-decoration: none;"><i
+          class="fab fa-discord footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="mailto:info.csirait@gmail.com" target="_blank" style="text-decoration: none;"><i
+          class="fas fa-envelope footlinks hover-up" style="margin-right: 5px;"></i></a>
+      <a href="https://decrypt.org.in" target="_blank" style="text-decoration: none;"><img src="assets/decrypt-logo.png"
+          class="hover-up" style="height: 25px; width: 25px; margin-bottom: 7px;"></a>
+
+    </p>
+
+    <br><br><br>
+
+    <p style="text-align: center; color: white; font-family: 'Montserrat', sans-serif;">
+      Made with <i class="fas fa-heart" style="color: #E3344A;"></i> by <a href="https://csirait.in"
+        style="text-decoration: none;"><span style="color: #003399; font-weight: 700;">CSI RAIT</span></a>
+    </p>
+
+    <p
+      style="font-size: 10px; font-family: 'Montserrat', sans-serif; background-color: #202020; text-align: center; color: white; margin: 0px; padding: 5px;">
+      Copyright © 2022 | Computer Society of India, RAIT | All rights reserved
+    </p>
+
+  </div>
+
+</body>
+
+</html>

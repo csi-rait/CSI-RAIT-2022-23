@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode | Team</title>
+    <link rel="icon" href="assets/favicon2.png" type="image/x-icon">
+
+    <meta property="og:title" content="OpenCode">
+    <meta property="og:description" content="OpenCode RAIT is a month long Open Source program during winters conducted by CSI RAIT, with an
+    aim to help beginners get started with Open Source Development while encouraging diversity.
+    Throughout the program, participants contribute to different projects under guidance of
+    experienced mentors. Top participants get exciting goodies and opportunities.">
+    <meta property="og:image" content="https://i.imgur.com/NjbxjDW.png">
+    <meta property="og:url" content="opencode/">
+
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Questrial&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/ce7f4069a5.js" crossorigin="anonymous"></script>
+
+    <!--Custom JS-->
+    <script src="script.js"></script>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!--Carousel CDNs-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+
+    <link href="style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body style="background-color: #202020; overflow-x: hidden;">
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 100) {
+                    $(".navbar").css({ "background-color": "#464C52" });
+                }
+                else {
+                    $(".navbar").css({ "background-color": "" });
+                }
+
+            })
+        })
+    </script>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark" style="margin: 0px;">
+        <div class="container-fluid">
+            <div class="navbar-brand" href="index.html">
+                <img src="assets/logo2.png" alt="CSI" style="height: 40.6px; width: 56.7px;"
+                    class="d-inline-block align-text-top">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page"
+                            href="index.html#aboutopencode" style="font-size: 18px; font-weight: 300;">About</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="index.html#schedule"
+                            style="font-size: 18px; font-weight: 300;">Schedule</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="projects.html"
+                            style="font-size: 18px; font-weight: 300;">Projects</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="leaderboard.html"
+                            style="font-size: 18px; font-weight: 300;">Leaderboard</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="index.html#sponsors"
+                            style="font-size: 18px; font-weight: 300;">Sponsors</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="faq.html"
+                            style="font-size: 18px; font-weight: 300;">FAQs</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="team.html"
+                            style="font-size: 18px; font-weight: 300;">Team</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 15px; font-size: 20px;">
+                        <a class="nav-link active hover-up navlinksf" aria-current="page" href="#contact"
+                            style="font-size: 18px; font-weight: 300;">Contact</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div style="margin: 0px;background-color: #202020; background-repeat: no-repeat; background-repeat: repeat-x;">
+
+        <div style="height: 200px;"></div>
+
+        <div class="row">
+
+            <h1 style="text-align: center; font-family: 'Questrial', sans-serif; color: white;">The Team</h1>
+            <p style="font-family: 'Montserrat', sans-serif; text-align: center; color: white;" class="text-muted">
+                Meet the passionate team behind OpenCode</p>
+
+            <br><br><br><br>
+
+
+            <div class="row justify-content-center" style="margin-left: 5px;">
+
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/Omkar_Kolte.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Omkar Kolte</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Chief Technical Officer</p>
+
+                                    <p><a href="https://github.com/psyduck1203" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/omkarkolte/"
+                                            target="_blank" style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/Kaustubh2.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Kaustubh Utturwar</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Head</p>
+
+                                    <p><a href="https://github.com/Kaustubh0204" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/kaustubh-utturwar-9367531b6/"
+                                            target="_blank" style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/darshan.png"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Darshan Rao</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Head</p>
+
+                                    <p><a href="https://github.com/darshanrao" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/darshan-rao-6226981b4/" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row justify-content-center" style="margin-left: 5px;">
+
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/kshitij.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Kshitij Darekar</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Research Co-Head</p>
+
+                                    <p><a href="https://github.com/KshitijDarekar" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/kshitij-darekar/"
+                                            target="_blank" style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/swastik.png"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Swastik Chaudhary</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="https://github.com/SwastikC28" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/swastik-chaudhary-04a413175/" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/vaishnavi.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Vaishnavi Patil</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="https://github.com/Vaishnavi145" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/vaishnavi-patil-967989199" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/mehul.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Mehul Sonavane</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="https://github.com/mehuls2905" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/mehul-sonavane-09371b211" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="row justify-content-center" style="margin-left: 5px;">
+
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/tejas.jpeg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Tejas Shelke</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="https://github.com/tejas-44" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/tejas-shelke-1b3b49199/"
+                                            target="_blank" style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/prachi.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Prachi Pathak</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="www.github.com/prachii2002" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="http://www.linkedin.com/in/prachipathak2002" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/sushant.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Sushant Bhosale</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="https://github.com/SUSHANT731" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/mwlite/in/sushant-bhosale-b290801a9" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+
+                    <div class="card text-white mb-3"
+                        style="max-width: 80rem; background-color: #021723; border-radius: 0.5vw; padding: 10px;">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="assets/anujkh.jpg"
+                                        style="height: 100px; width: 100px; border-radius: 1vw;">
+                                </div>
+                                <div class="col-7">
+                                    <h6 class="card-title">Anuj Khanvilkar</h6>
+                                    <hr style="background-color: #52B3D9; opacity: 100%; height: 0.5px;">
+                                    <p class="card-text text-muted">Technical Team</p>
+
+                                    <p><a href="https://github.com/anujkhanvilkar" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-github"></i></a> &nbsp&nbsp
+                                        <a href="https://www.linkedin.com/in/anuj-khanvilkar-29756321b" target="_blank"
+                                            style="text-decoration: none; color:#52B3D9">
+                                            <i class="fab fa-linkedin-in"></i></a> &nbsp&nbsp
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+          
+            <!-- partial -->
+            <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <script>
+        const items = document.querySelectorAll(".accordion button");
+
+        function toggleAccordion() {
+            const itemToggle = this.getAttribute('aria-expanded');
+
+            for (i = 0; i < items.length; i++) {
+                items[i].setAttribute('aria-expanded', 'false');
+            }
+
+            if (itemToggle == 'false') {
+                this.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        items.forEach(item => item.addEventListener('click', toggleAccordion));
+    </script>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Hind:300,400&display=swap");
+
+        * {
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .faq {
+            margin: 0;
+            padding: 0;
+            font-family: "Hind", sans-serif;
+            background: #202020;
+            color: #4d5974;
+            display: flex;
+            min-height: 100vh;
+
+        }
+
+        .containerfaq {
+            margin: 0 auto;
+            padding: 4rem;
+            width: 48rem;
+
+        }
+
+        .accordion .accordion-item {
+            border-bottom: 1px solid #202020;
+            background-color: #202020;
+            padding: 10px;
+            /* border: 0.1px solid white; */
+        }
+
+        .accordion .accordion-item button[aria-expanded=true] {
+            border-bottom: 1px solid #03b5d2;
+
+        }
+
+        .accordion button {
+            position: relative;
+            display: block;
+            text-align: left;
+            width: 100%;
+            padding: 1em 0;
+            color: #7288a2;
+            font-size: 1.15rem;
+            font-weight: 400;
+            border: none;
+            background: none;
+            outline: none;
+        }
+
+        .accordion button:hover,
+        .accordion button:focus {
+            cursor: pointer;
+            color: #03b5d2;
+        }
+
+        .accordion button:hover::after,
+        .accordion button:focus::after {
+            cursor: pointer;
+            color: #03b5d2;
+            border: 1px solid #03b5d2;
+        }
+
+        .accordion button .accordion-title {
+            padding: 1em 1.5em 1em 0;
+        }
+
+        .accordion button .icon {
+            display: inline-block;
+            position: absolute;
+            top: 18px;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            border: 1px solid;
+            border-radius: 22px;
+
+        }
+
+        .accordion button .icon::before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 9px;
+            left: 5px;
+            width: 10px;
+            height: 2px;
+            background: currentColor;
+        }
+
+        .accordion button .icon::after {
+            display: block;
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 9px;
+            width: 2px;
+            height: 10px;
+            background: currentColor;
+        }
+
+        .accordion button[aria-expanded=true] {
+            color: #03b5d2;
+        }
+
+        .accordion button[aria-expanded=true] .icon::after {
+            width: 0;
+        }
+
+        .accordion button[aria-expanded=true]+.accordion-content {
+            opacity: 1;
+            max-height: 19em;
+            transition: all 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content {
+            color: white;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: opacity 200ms linear, max-height 200ms linear;
+            will-change: opacity, max-height;
+        }
+
+        .accordion .accordion-content p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 2em 0;
+        }
+
+        #stars:after {
+            top: 0px;
+        }
+
+        #stars2:after {
+            top: 0px;
+        }
+
+        #stars3:after {
+            top: 0px;
+        }
+    </style>
+
+<div style="height: 150px;"></div>
+
+
+    <div id="contact" class="row justify-content-center" style="background-color: #021723; color: white;">
+        <h3 style="font-family: 'Questrial', sans-serif; text-align: center; margin-top: 50px;"> <img
+                src="assets/logo2.png" alt="oc" style="height: 40.6px; width: 56.7px;" class="img-fluid"> | OpenCode
+        </h3>
+        <hr style="width: 75%;">
+        <p style="text-align: center; font-family: 'Montserrat', sans-serif; text-align: center;">
+            CSI RAIT is one of the fastest growing tech-community in India. OpenCode is a non-profit<br>
+            project brought to you by CSI RAIT to help beginners in<br>
+            technology. Be a part, spread knowledge & happiness.</p>
+
+        <p style="text-align: center; font-size: 25px; color: #021723;">
+
+            <a href="https://csirait.in" target="_blank" style="text-decoration: none;"><img src="assets/csi-logo.png"
+                    target="_blank" class="hover-up"
+                    style="height: 25px; width: 25px; margin-bottom: 7px; margin-right: 5px;"></a>
+            <a href="https://wa.me/+917066695395?text=I%20am%20interested%20" target="_blank"
+                style="text-decoration: none;"><i class="fab fa-whatsapp footlinks hover-up"
+                    style="margin-right: 5px;"></i></a>
+            <a href="https://www.instagram.com/csi.rait/" target="_blank" style="text-decoration: none;"><i
+                    class="fab fa-instagram footlinks hover-up" style="margin-right: 5px;"></i></a>
+            <a href="https://www.youtube.com/channel/UCs8N_fX2lLsoLZj6pPPjVWQ" target="_blank"
+                style="text-decoration: none;"><i class="fab fa-youtube footlinks hover-up"
+                    style="margin-right: 5px;"></i></a>
+            <a href="https://www.facebook.com/csirait.official/" target="_blank" target="_blank"
+                style="text-decoration: none;"><i class="fab fa-facebook footlinks hover-up"
+                    style="margin-right: 5px;"></i></a>
+            <a href="https://github.com/csi-rait" target="_blank" style="text-decoration: none;"><i
+                    class="fab fa-github footlinks hover-up" style="margin-right: 5px;"></i></a>
+            <a href="https://www.linkedin.com/in/csi-rait/" target="_blank" style="text-decoration: none;"><i
+                    class="fab fa-linkedin-in footlinks hover-up" style="margin-right: 5px;"></i></a>
+            <a href="https://discord.gg/EQfTxTBnBd" target="_blank" style="text-decoration: none;"><i
+                    class="fab fa-discord footlinks hover-up" style="margin-right: 5px;"></i></a>
+            <a href="mailto:info.csirait@gmail.com" target="_blank" style="text-decoration: none;"><i
+                    class="fas fa-envelope footlinks hover-up" style="margin-right: 5px;"></i></a>
+            <a href="https://decrypt.org.in" target="_blank" style="text-decoration: none;"><img
+                    src="assets/decrypt-logo.png" class="hover-up"
+                    style="height: 25px; width: 25px; margin-bottom: 7px;"></a>
+
+        </p>
+
+        <br><br><br>
+
+        <p style="text-align: center; color: white; font-family: 'Montserrat', sans-serif;">
+            Made with <i class="fas fa-heart" style="color: #E3344A;"></i> by <a href="https://csirait.in"
+                style="text-decoration: none;"><span style="color: #003399; font-weight: 700;">CSI RAIT</span></a>
+        </p>
+
+        <p
+            style="font-size: 10px; font-family: 'Montserrat', sans-serif; background-color: #202020; text-align: center; color: white; margin: 0px; padding: 5px;">
+            Copyright © 2022 | Computer Society of India, RAIT | All rights reserved
+        </p>
+
+    </div>
+
+</body>
+
+</html>
